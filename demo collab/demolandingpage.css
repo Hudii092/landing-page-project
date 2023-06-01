@@ -1,21 +1,25 @@
 .categories-container{
     
     width: 225px;
-    max-height: 2000px;
+    height: 2000px;
     background-color: #eb5656;
     box-shadow: 0 4px 4px -8px red;
     padding: 20px 0 60px;
-    z-index: 9;
-    position:absolute;
+    z-index:-2;
+    position:relative;
     overflow-y: auto;
     overflow-x: hidden;
+    bottom:0;
+    margin-top:auto;
 }
+
 .list{
     display: grid;
     grid-row: 1fr 1fr 1fr;
     gap: 4px ;
 
 }
+
  .list a{
     text-decoration: none;
     color:white;
@@ -44,7 +48,7 @@
     font-family: fantasy;
     font-size: 20px;
     color: aqua; */
-  }
+  
 .list ul{
 list-style-type: none;
 
@@ -57,11 +61,11 @@ list-style-type: none;
 
 .banner{
   background-color: rgb(255, 33, 33);
-  width:100%;
-  max-height:100px;
+  max-width:100%;
+  height:40px;
   z-index:10;
   border: black;
-  position:relative;
+  position:sticky;
   display: flex;
   flex-direction: row;
   color: white;
@@ -74,6 +78,8 @@ list-style-type: none;
   z-index: 1;
   padding-left: 10px;
   box-shadow:none;
+  top:0;
+  
   
 }
 
@@ -95,9 +101,7 @@ list-style-type: none;
   .icon:hover {
     background: #00866c;
   }
-  .profile,.mini{
-    display: none;
-  }
+  
   .searchBar {
     width: 100%;
     display: flex;
@@ -130,3 +134,18 @@ list-style-type: none;
   #searchQuerySubmit:hover {
     cursor: pointer;
   }
+  .profile{
+    display:none;
+  }
+  .mini{
+    width:35px;
+    height: 35px;
+    background-color: blue;
+    position:fixed;
+    left:53%;
+    top:20px;
+    z-index:11;
+    transform: translate(-50%,5%);  
+    gap:10px;
+  }
+ 
